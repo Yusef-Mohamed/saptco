@@ -2,9 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        main: "#b59266", // يمكنك استبدال #ff0000 بلون الأساسي الذي ترغب به
+      },
+    },
   },
-  plugins: [],
   plugins: [require("tw-elements/dist/plugin.cjs")],
   darkMode: "class",
 };

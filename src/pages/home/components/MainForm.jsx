@@ -1,15 +1,17 @@
 import React from "react";
+import Stages from "../../../components/Stages";
+import { useNavigate } from "react-router";
 
 function MainForm() {
+  const nav = useNavigate();
+  const handelSubmit = function (e) {
+    e.preventDefault();
+    nav("/stage-2");
+  };
   return (
     <div className="max-w-[650px] mx-auto">
-      <img
-        src="https://static.wixstatic.com/media/a2ad54_0389bf78a6744a04b214ef91bc056267~mv2.jpg/v1/fill/w_560,h_116,al_c,q_80,enc_auto/a2ad54_0389bf78a6744a04b214ef91bc056267~mv2.jpg"
-        alt=""
-        className=" w-full"
-      />
-
-      <form>
+      <Stages stage={1} />
+      <form onSubmit={(e) => handelSubmit(e)}>
         <div className="flex justify-evenly bg-[#b59266]  p-6 text-black mt-4 rounded-lg">
           <div class="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem] w-fit">
             <input

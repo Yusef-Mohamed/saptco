@@ -7,7 +7,7 @@ body {
   @apply mt-[100px];
 }
 .input-text {
-  @apply w-full border-2 rounded-lg p-4 my-4 placeholder:text-black placeholder:text-2xl;
+  @apply w-full border-2 rounded-lg p-4 my-2 placeholder:text-black placeholder:text-2xl;
 }
 .break-line {
   @apply w-4/5 h-1 mx-auto my-4 bg-[#b59266];
