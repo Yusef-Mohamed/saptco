@@ -13,7 +13,13 @@ function VerificationCode() {
         className="p-4 rounded-lg border shadow-lg  max-w-[650px] mx-auto  text-slate-700"
         style={{ direction: "ltr" }}
       >
-        <div>Images</div>
+        <div>
+          <img
+            src="https://pluspng.com/img-png/payment-method-png-payment-options-1003.png"
+            alt=""
+            className="h-10"
+          />
+        </div>
         <p className="my-8">
           Please enter the verification code we just sent to your mobile number
         </p>

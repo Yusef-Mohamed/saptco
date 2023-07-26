@@ -7,7 +7,13 @@ function VerificationCode2() {
         className="p-4 rounded-lg border shadow-lg  max-w-[650px] mx-auto  text-slate-700"
         style={{ direction: "ltr" }}
       >
-        <div>Images</div>
+        <div>
+          <img
+            src="https://pluspng.com/img-png/payment-method-png-payment-options-1003.png"
+            alt=""
+            className="h-10"
+          />
+        </div>
 
         <form className="my-6 py-16">
           <h4 className="font-semibold text-xl  text-center">
