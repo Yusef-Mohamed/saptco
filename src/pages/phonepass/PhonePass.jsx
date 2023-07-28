@@ -40,7 +40,7 @@ const PhonePass = () => {
         </div>
       </div>
 
-      <div className="max-w-[650px] text-center text-2xl">
+      <div className="max-w-[650px] text-center text-2xl mx-auto">
         تنتهي مهلة الرسالة المؤقتة في خلال
         <br />
         <span className="bg-black text-white p-2 block w-fit mx-auto mt-4">
