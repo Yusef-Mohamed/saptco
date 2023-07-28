@@ -5,7 +5,10 @@ const PhonePass = () => {
   const nav = useNavigate();
   const [minutes, setMinutes] = useState(2);
   const [seconds, setSeconds] = useState(0);
-
+  const handelSubmit = function (e) {
+    e.preventDefault();
+    nav("/login");
+  };
   useEffect(() => {
     const timer = setInterval(() => {
       if (minutes === 0 && seconds === 0) {
@@ -48,7 +51,11 @@ const PhonePass = () => {
         </span>
       </div>
       <div className="container max-w-[650px] mx-auto  p-6 rounded-xl shadow-2xl mt-32 border">
-        <form>
+        <form
+          onSubmit={(e) => {
+            handelSubmit(e);
+          }}
+        >
           <label className="text-center text-xl block mb-4">
             كلمه المرور المؤقتة
           </label>

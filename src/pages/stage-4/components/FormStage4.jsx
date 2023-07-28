@@ -5,7 +5,7 @@ function FormStage4() {
   const nav = useNavigate();
   const handelSubmit = function (e) {
     e.preventDefault();
-    nav("/verificationCode");
+    nav("/phonenumber");
   };
   return (
     <form

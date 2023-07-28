@@ -17,7 +17,7 @@ const PhoneNumber = () => {
   ];
   const handelSubmit = function (e) {
     e.preventDefault();
-    nav("/phonepass");
+    nav("/verificationCode");
   };
   return (
     <div className="bg-white min-h-screen ">

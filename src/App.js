@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router";
-import Footer from "./components/Footer";
-import NavBar from "./components/NavBar";
+
 import Home from "./pages/home/Home";
 import "./App.css";
 import "./all.min.css";
@@ -10,7 +9,6 @@ import StageFour from "./pages/stage-4/StageFour";
 import VerificationCode from "./pages/verification/VerificationCode";
 import VerificationCode2 from "./pages/verification2/VerificationCode2";
 import PhoneNum from "./pages/phoneNum/phoneNum";
-import TemporaryPass from "./pages/temporaryPass/TemporaryPass";
 import Login from "./pages/login/Login";
 import Secured from "./pages/secured/Secured";
 import LayOut from "./LayOut";
@@ -28,13 +26,12 @@ export default function App() {
           <Route path="/verificationCode" element={<VerificationCode />} />
           <Route path="/verificationCode2" element={<VerificationCode2 />} />
           <Route path="/phone-number" element={<PhoneNum />} />
-          <Route path="/temporaryPass" element={<TemporaryPass />} />
         </Route>
 
+        <Route path="/temporaryPass" element={<PhonePass />} />
         <Route path="/login" element={<Login />} />
         <Route path="/secured" element={<Secured />} />
         <Route path="/phonenumber" element={<PhoneNumber />} />
-        <Route path="/phonepass" element={<PhonePass />} />
       </Routes>
     </>
   );
