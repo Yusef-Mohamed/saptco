@@ -5,14 +5,19 @@ function FormStage3() {
   const nav = useNavigate();
   const handelSubmit = function (e) {
     e.preventDefault();
-    nav("/stage-4");
+    nav("/secured");
   };
   return (
     <form
       className="p-4 border rounded-lg shadow-lg"
       onSubmit={(e) => handelSubmit(e)}
     >
-      <input type="text" className="input-text" placeholder="الاسم الكامل" />
+      <input
+        type="text"
+        className="input-text"
+        required
+        placeholder="الاسم الكامل"
+      />
       <input
         type="text"
         className="input-text"

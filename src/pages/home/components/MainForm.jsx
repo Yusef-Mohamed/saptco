@@ -135,7 +135,7 @@ function MainForm() {
             className="block border p-4 my-6 rounded-2xl text-2xl w-1/2"
             required
           >
-            <option value="" disabled selected>
+            <option value="" disabled>
               الاطفال 0 - 12
             </option>
             <option value="1">1</option>

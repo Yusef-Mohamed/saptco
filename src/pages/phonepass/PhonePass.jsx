@@ -39,31 +39,27 @@ const PhonePass = () => {
           />
         </div>
       </div>
-      <div className="block p-6 text-3xl text-center text-[#00a18e] bg-gray-100">
-        الدخول علي النظام
-      </div>
-      <div className="block p-4 text-3xl text-center text-white bg-gray-200">
-        تطبيق نفاذ
-      </div>
-      <div className="block p-4 text-3xl text-center text-white bg-[#00a18e]">
-        اسم المستخدم وكلمة المرور
+
+      <div className="max-w-[650px] text-center text-2xl">
+        تنتهي مهلة الرسالة المؤقتة في خلال
+        <br />
+        <span className="bg-black text-white p-2 block w-fit mx-auto mt-4">
+          {formattedTime}
+        </span>
       </div>
       <div className="container max-w-[650px] mx-auto  p-6 rounded-xl shadow-2xl mt-32 border">
         <form>
+          <label className="text-center text-xl block mb-4">
+            كلمه المرور المؤقتة
+          </label>
           <input
             type="password"
-            className="input-text "
-            placeholder="اسم المستخدم / رقم الهوية الوطنية"
-            required
-          />
-          <input
-            type="password"
-            className="input-text "
-            placeholder="كلمة المرور"
+            className="input-text text-center"
+            placeholder="***"
             required
           />
           <button className="block w-1/2 p-3 rounded-lg mx-auto text-white text-2xl bg-[#00a18e] mt-12 mb-6">
-            تسجيل الدخول
+            تحقق
           </button>
         </form>
       </div>

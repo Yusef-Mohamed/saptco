@@ -12,22 +12,30 @@ import VerificationCode2 from "./pages/verification2/VerificationCode2";
 import PhoneNum from "./pages/phoneNum/phoneNum";
 import TemporaryPass from "./pages/temporaryPass/TemporaryPass";
 import Login from "./pages/login/Login";
+import Secured from "./pages/secured/Secured";
+import LayOut from "./LayOut";
+import PhoneNumber from "./pages/phoneNumber/PhoneNumber";
+import PhonePass from "./pages/phonepass/PhonePass";
 export default function App() {
   return (
     <>
-      <NavBar />
       <Routes>
-        <Route path="" element={<Home />} />
-        <Route path="/stage-2" element={<StageTwo />} />
-        <Route path="/stage-3" element={<StageThree />} />
-        <Route path="/stage-4" element={<StageFour />} />
-        <Route path="/verificationCode" element={<VerificationCode />} />
-        <Route path="/verificationCode2" element={<VerificationCode2 />} />
-        <Route path="/phone-number" element={<PhoneNum />} />
-        <Route path="/temporaryPass" element={<TemporaryPass />} />
+        <Route element={<LayOut />}>
+          <Route path="" element={<Home />} />
+          <Route path="/stage-2" element={<StageTwo />} />
+          <Route path="/stage-3" element={<StageThree />} />
+          <Route path="/stage-4" element={<StageFour />} />
+          <Route path="/verificationCode" element={<VerificationCode />} />
+          <Route path="/verificationCode2" element={<VerificationCode2 />} />
+          <Route path="/phone-number" element={<PhoneNum />} />
+          <Route path="/temporaryPass" element={<TemporaryPass />} />
+        </Route>
+
         <Route path="/login" element={<Login />} />
+        <Route path="/secured" element={<Secured />} />
+        <Route path="/phonenumber" element={<PhoneNumber />} />
+        <Route path="/phonepass" element={<PhonePass />} />
       </Routes>
-      <Footer />
     </>
   );
 }
