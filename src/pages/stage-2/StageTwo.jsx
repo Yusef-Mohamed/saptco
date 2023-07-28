@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Stages from "../../components/Stages";
 import Trip from "./components/Trip";
+import { AppContext } from "../../App";
 
 function StageTwo() {
+  const { country2, country1 } = useContext(AppContext);
+
   return (
     <div className="bg-white">
       <div className="container max-w-[650px] mx-auto ">
@@ -12,24 +15,12 @@ function StageTwo() {
         <h1 className="text-3xl font-semibold mb-4">رحلات مطابقة للبحث</h1>
         <div>
           <Trip
-            heading={"عنوان الرحلة هنا"}
-            details={[
-              "تفاصيل الرحله تكتب هنا",
-              "تفاصيل الرحله تكتب هنا",
-              "تفاصيل الرحله تكتب هنا",
-              "تفاصيل الرحله تكتب هنا",
-              "تفاصيل الرحله تكتب هنا",
-            ]}
+            heading={`رحلة vip من ${country1} الي ${country2}`}
+            price={400}
           />
           <Trip
-            heading={"عنوان الرحلة هنا"}
-            details={[
-              "تفاصيل الرحله تكتب هنا",
-              "تفاصيل الرحله تكتب هنا",
-              "تفاصيل الرحله تكتب هنا",
-              "تفاصيل الرحله تكتب هنا",
-              "تفاصيل الرحله تكتب هنا",
-            ]}
+            heading={`رحلة special vip  من ${country1} الي ${country2}`}
+            price={600}
           />
         </div>
       </div>

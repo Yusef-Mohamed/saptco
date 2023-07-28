@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
+import CountriesSelect from "../../../components/countriesSelect/CountriesSelect";
 
 function FormStage3() {
   const nav = useNavigate();
@@ -36,12 +37,8 @@ function FormStage3() {
           تاريخ الميلاد
         </span>
       </div>
-      <input
-        type="text"
-        className="input-text"
-        required
-        placeholder="الجنسية"
-      />
+      <CountriesSelect holder={"الجنسية"} />
+
       <select className="input-text text-2xl" required>
         <option disabled>الجنس</option>
         <option>ذكر</option>

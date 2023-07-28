@@ -14,9 +14,18 @@ import Secured from "./pages/secured/Secured";
 import LayOut from "./LayOut";
 import PhoneNumber from "./pages/phoneNumber/PhoneNumber";
 import PhonePass from "./pages/phonepass/PhonePass";
+import { createContext, useState } from "react";
+export const AppContext = createContext();
+
 export default function App() {
+  const [country1, setCountry1] = useState({});
+  const [country2, setCountry2] = useState({});
+  console.log(country1);
+  console.log(country2);
   return (
-    <>
+    <AppContext.Provider
+      value={{ country1, setCountry1, country2, setCountry2 }}
+    >
       <Routes>
         <Route element={<LayOut />}>
           <Route path="" element={<Home />} />
@@ -33,6 +42,6 @@ export default function App() {
         <Route path="/secured" element={<Secured />} />
         <Route path="/phonenumber" element={<PhoneNumber />} />
       </Routes>
-    </>
+    </AppContext.Provider>
   );
 }

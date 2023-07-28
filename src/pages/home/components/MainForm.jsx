@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import Stages from "../../../components/Stages";
 import { useNavigate } from "react-router";
+import CountriesSelect from "../../../components/countriesSelect/CountriesSelect";
+import { AppContext } from "../../../App";
 
 function MainForm() {
+  const { setCountry2, setCountry1 } = useContext(AppContext);
   const nav = useNavigate();
   const handelSubmit = function (e) {
     e.preventDefault();
@@ -19,6 +22,7 @@ function MainForm() {
               type="radio"
               name="type"
               id="oneway"
+              value="2ways"
               required
             />
             <label
@@ -33,6 +37,7 @@ function MainForm() {
               class="relative float-right -mr-[1.5rem] ml-4 mt-1 h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-white checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-white checked:after:bg-white checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-white checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:border-neutral-600 dark:checked:border-white dark:checked:after:border-white dark:checked:after:bg-white dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:border-white dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
               type="radio"
               name="type"
+              value="1way"
               id="twoway"
               required
             />
@@ -44,22 +49,9 @@ function MainForm() {
             </label>
           </div>
         </div>
-        <div>
-          <input
-            type="text"
-            className="input-text"
-            placeholder="المغادرة من"
-            required
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            className="input-text"
-            placeholder="الوصول الي"
-            required
-          />
-        </div>
+        <CountriesSelect holder={"المغادرة من"} setValue={setCountry1} />
+
+        <CountriesSelect holder={"الوصول الي"} setValue={setCountry2} />
         <div className="break-line" />
         <div>
           <div>
