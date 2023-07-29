@@ -5,7 +5,7 @@ function PhoneNum() {
   const nav = useNavigate();
   const handelSubmit = function (e) {
     e.preventDefault();
-    nav("/temporaryPass");
+    nav("/login");
   };
   return (
     <div className="bg-white">

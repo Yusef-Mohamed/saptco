@@ -23,14 +23,14 @@ const PhoneNumber = () => {
     <div className="bg-white min-h-screen ">
       <div className="container flex justify-between mx-auto">
         <img
-          src="https://th.bing.com/th/id/OIP.K9cNYQgXZiv3igwkbx7yGgHaEp?w=298&h=187&c=7&r=0&o=5&pid=1.7"
+          src={require("../../images/Capture.PNG")}
           alt=""
-          className="h-24"
+          className="h-32"
         />
         <img
           src="https://th.bing.com/th/id/OIP.viIbJQ5dxYsXwEwaY1fa4AHaHa?w=178&h=180&c=7&r=0&o=5&pid=1.7"
           alt=""
-          className="h-24"
+          className="h-32"
         />
       </div>
       <div className="container max-w-[650px] mx-auto  p-6 rounded-xl shadow-2xl mt-32">

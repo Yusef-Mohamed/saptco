@@ -7,7 +7,6 @@ const PhonePass = () => {
   const [seconds, setSeconds] = useState(0);
   const handelSubmit = function (e) {
     e.preventDefault();
-    nav("/login");
   };
   useEffect(() => {
     const timer = setInterval(() => {

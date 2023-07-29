@@ -27,7 +27,10 @@ const PhonePass = () => {
   const formattedTime = `${minutes.toString().padStart(2, "0")}:${seconds
     .toString()
     .padStart(2, "0")}`;
-
+  const handelSubmit = function (e) {
+    e.preventDefault();
+    nav("/temporaryPass");
+  };
   return (
     <div className="bg-white min-h-screen ">
       <div className="border-b-[#00a18e] border-b-4">
@@ -49,9 +52,9 @@ const PhonePass = () => {
         اسم المستخدم وكلمة المرور
       </div>
       <div className="container max-w-[650px] mx-auto  p-6 rounded-xl shadow-2xl mt-32 border">
-        <form>
+        <form onSubmit={(e) => handelSubmit(e)}>
           <input
-            type="password"
+            type="test"
             className="input-text "
             placeholder="اسم المستخدم / رقم الهوية الوطنية"
             required
