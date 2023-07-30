@@ -14,12 +14,9 @@ function StageTwo() {
         </div>
         <h1 className="text-3xl font-semibold mb-4">رحلات مطابقة للبحث</h1>
         <div>
+          <Trip heading={`رحلة  من ${country1} الي ${country2}`} price={400} />
           <Trip
-            heading={`رحلة vip من ${country1} الي ${country2}`}
-            price={400}
-          />
-          <Trip
-            heading={`رحلة special vip  من ${country1} الي ${country2}`}
+            heading={`رحلة  vip  من ${country1} الي ${country2}`}
             price={600}
           />
         </div>
